@@ -1,0 +1,8 @@
+//window本机编译
+cmake .. -DOSG_PATH=F:/work/3thd/platform-pass-builder-lib/syz -DSYZ_SDK_VERSION=builderSDK3.1 -DCMAKE_BUILD_INCLUDE_DIR=F:/work/3thd/dep/branches
+
+//linux 192.168.2.31 wasm编译
+cmake .. -DOSG_PATH=/home/chensong/SYZ/WASM/osgverse/build/sdk_wasm2 -DSYZ_SDK_VERSION=BuilderSDK3.1 -DCMAKE_BUILD_INCLUDE_DIR=/home/chensong/SYZ/WASM -DUSE_WASM_OPTIONS=ON
+
+带安装路径
+cmake -B build-wasm -S . -DCMAKE_INSTALL_PREFIX=./install -DOSG_PATH=/home/chensong/SYZ/WASM/osgverse/build/sdk_wasm2 -DSYZ_SDK_VERSION=BuilderSDK3.1 -DCMAKE_BUILD_INCLUDE_DIR=/home/chensong/SYZ/WASM -DUSE_WASM_OPTIONS=ON
